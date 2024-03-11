@@ -20,7 +20,7 @@ const mockedFetchFnSuccessResp = () => jest.fn((url) => {
     return Promise.resolve({
       ok: true,
       status: 200,
-      json: async () => ({ responses: orderData, finalPageIndex: 1 }),
+      json: async () => ({ orders: orderData, finalPageIndex: 1 }),
     }) as Promise<Response>;
   }
 });

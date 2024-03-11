@@ -56,7 +56,7 @@ const App = () => {
     fetch(`${serverUrl}sales/${page}?sortBy=${sortBy}&orderBy=${orderBy}`)
       .then(checkStatusCodeApi)
       .then((data) => {
-        setOrders(data.responses);
+        setOrders(data.orders);
         setFinalPageNo(data.finalPageIndex);
         setLoading(false)
       }).catch(e => {

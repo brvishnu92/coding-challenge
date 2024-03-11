@@ -57,7 +57,7 @@ export const getOrders = async (req: any, res: any) => {
         const endIndex = startIndex + recordsPerPage
         const finalPageIndex = parseInt((filteredOrders.length / recordsPerPage).toString())
 
-        res.status(200).json({ responses: filteredOrders.slice(startIndex, endIndex), finalPageIndex })
+        res.status(200).json({ orders: filteredOrders.slice(startIndex, endIndex), finalPageIndex })
     } catch (e: unknown) {
         const message = e instanceof Error ? e.message : "Unknown error."
         res.status(500).json({ message })
