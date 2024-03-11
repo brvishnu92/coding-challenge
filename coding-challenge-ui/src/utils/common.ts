@@ -1,0 +1,1 @@
+export const getFlagIconUrl = (country: string) => `https://flagsapi.com/${country.substring(0, 2)}/flat/16.png`

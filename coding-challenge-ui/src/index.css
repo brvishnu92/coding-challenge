@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 1080px;
+  width: 100%;
+}
+
+tbody {
+  border-bottom: 1px solid lightgray;
+}
+
+th {
+  background-color: #f5f6fa;
+  padding: 8px;
+  color: #aaacb9;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+tr {
+  border-bottom: 2px solid #f6f6f8;
+  height: 50px;
+}
+
+td {
+  padding: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+td img {
+  display: inline;
+  margin-right: 2px;
+  margin-bottom: -4px;
+}
+
+
+tbody tr td:last-child{
+color: #b7210c;
+}
+
+tfoot {
+  color: gray;
+}
+
+tfoot th {
+  font-weight: normal;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.pagination{
+  margin-left: auto;
+}
+
+.pagination td{
+  text-align: end;
+}
+
+.pagination label {
+  font-size: 13px;
+  margin-right: 4px;
+}
+
+.pagination input {
+  width: 20px;
+  margin-right: 4px;
+}
