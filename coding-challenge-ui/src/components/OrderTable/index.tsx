@@ -6,6 +6,7 @@ import { getFlagIconUrl } from "../../utils/common";
 import { Orders } from "../../types";
 import Pagination from "../Pagination";
 import { orderTableHeaderValues } from "../../utils/constants";
+import { Icon, TdMessage } from "./styles";
 
 const OrderTable = ({ handleSort, loading, orders, page, setPage, finalPageNo }: { loading: boolean, orders: Array<any>, handleSort: Function, page: number, setPage: Function, finalPageNo: number, }) => {
 
@@ -22,7 +23,7 @@ const OrderTable = ({ handleSort, loading, orders, page, setPage, finalPageNo }:
                 {headers.map(header => (
                     <th key={header}>
                         {header}
-                        <img src={SortIcon} data-testid={`sort-${header}`} style={{ width: '15px', marginLeft: '5px' }} onClick={() => handleSort(header)} />
+                        <Icon src={SortIcon} data-testid={`sort-${header}`} onClick={() => handleSort(header)} />
                     </th>))}
             </tr>
         </thead>
@@ -30,9 +31,9 @@ const OrderTable = ({ handleSort, loading, orders, page, setPage, finalPageNo }:
             (loading || orders.length === 0) ?
                 <tbody>
                     <tr>
-                        <td colSpan={headers.length} style={{ textAlign: 'center', color: 'grey' }}>
+                        <TdMessage colSpan={headers.length}>
                             {loading ? 'Loading...' : 'No Records'}
-                        </td>
+                        </TdMessage>
                     </tr>
                 </tbody>
                 :
