@@ -11,7 +11,7 @@ export const extractStoreInfo = (id: number, stores: Stores[]): Object => {
         const { marketplace, shopName, country } = matchingStore
         return { marketplace, shopName, country }
     } else {
-        return { marketplace: '', shopName: '', country: '' }
+        return { marketplace: '', shopName: '', country: 'AUS' }
     }
 }
 
